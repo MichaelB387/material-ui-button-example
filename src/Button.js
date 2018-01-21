@@ -1,37 +1,34 @@
 import React from 'react';
 
 
-class Button extends Component {
+class Button extends React.Component {
     constructor() {
-      super()
-      this.state = {
-        text: "Make a selection"
+        super()
+        this.state = {
+          text: "Make a selection"
+        }
       }
-    }
-    
-     clickedTrue(text){
-       this.setState({ text: text})
-       console.log()
-   
-    }
-   
-    clickedFalse(text){
-     this.setState({ text: text})
-     console.log()
-   
-   }
-   
+      
+       clickedTrue(text){
+         console.log(text)
      
-     render() {
-   
-       return (
-         <div className="App">
-         {this.state.text}
-           <button onClick={ (e) => {this.clickedTrue("true") } }>True</button>
-           <button onClick={ (e) => {this.clickedFalse("false") } }>False</button>        
-         </div>
-       );
+      }
+     
+      clickedFalse(text){
+       console.log(text)
+     
      }
-   }
+     
+       
+       render() {
+     
+         return (
+           <div className="App">
+             <button onClick={ (e) => {this.clickedTrue("true") } }>True</button>
+             <button onClick={ (e) => {this.clickedFalse("false") } }>False</button>        
+           </div>
+         );
+       }
+     }
    
    export default Button;
