@@ -24,8 +24,8 @@ class Button extends React.Component {
      
          return (
            <div className="App">
-             <button onClick={ (e) => {this.clickedTrue("true") } }>True</button>
-             <button onClick={ (e) => {this.clickedFalse("false") } }>False</button>        
+             <button className="button-true" onClick={ (e) => {this.clickedTrue("true") } }>True</button>
+             <button className="button-false" onClick={ (e) => {this.clickedFalse("false") } }>False</button>        
            </div>
          );
        }
